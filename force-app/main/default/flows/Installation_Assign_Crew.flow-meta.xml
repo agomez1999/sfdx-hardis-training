@@ -15,7 +15,53 @@
                 <stringValue>Scheduled</stringValue>
             </value>
         </assignmentItems>
+        <connector>
+            <targetReference>Is_Flat_Roof_Under_3</targetReference>
+        </connector>
     </assignments>
+    <assignments>
+        <description>A flat roof needs at least three people on the crew.</description>
+        <name>Set_Crew_To_Three</name>
+        <label>Set Crew To Three</label>
+        <locationX>50</locationX>
+        <locationY>539</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Crew_Size__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <numberValue>3.0</numberValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Is_Flat_Roof_Under_3</name>
+        <label>Is Flat Roof Under 3</label>
+        <locationX>176</locationX>
+        <locationY>431</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Flat_Roof_Needs_Crew</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Roof_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Flat</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Crew_Size__c</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <numberValue>3.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Crew_To_Three</targetReference>
+            </connector>
+            <label>Flat Roof Needs Crew</label>
+        </rules>
+    </decisions>
     <description>When a planner puts a crew on a planned installation that already has a date, the installation moves to Scheduled on its own.</description>
     <environments>Default</environments>
     <interviewLabel>Installation Assign Crew {!$Flow.CurrentDateTime}</interviewLabel>
