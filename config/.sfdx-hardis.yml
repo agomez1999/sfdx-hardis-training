@@ -3,9 +3,11 @@ developmentBranch: integration
 productionBranch: main
 orgAuthenticationMode: secretsOnly
 availableTargetBranches:
-  - Available PR/MR target branches
+  - integration
+  - preprod
 availableTargetBranchesLabels:
-  - Labels for available PR/MR target branches
+  - The shared integration org, where every contributor merges
+  - Hotfixes on the production version, agreed with the release manager
 branchPrefixChoices:
   - value: features
     title: "Feature: a new capability or an improvement"
