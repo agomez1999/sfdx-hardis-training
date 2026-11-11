@@ -1,11 +1,13 @@
 projectName: HeliosEnergy
 developmentBranch: integration
 productionBranch: main
-orgAuthenticationMode: secretsOnly
+orgAuthenticationMode: encryptedCert
 availableTargetBranches:
-  - Available PR/MR target branches
+  - integration
+  - preprod
 availableTargetBranchesLabels:
-  - Labels for available PR/MR target branches
+  - The shared integration org, where every contributor merges
+  - Hotfixes on the production version, agreed with the release manager
 branchPrefixChoices:
   - value: features
     title: "Feature: a new capability or an improvement"
@@ -254,7 +256,7 @@ devHubAlias: ""
 devHubInstanceUrl: https://login.salesforce.com
 devHubUsername: ""
 enableDeltaDeploymentBetweenMajorBranches: false
-enablePromotionBranches: false
+enablePromotionBranches: true
 detectManualCherryPicks: false
 enableDeploymentApexTestClasses: false
 enableDeprecatedDeploymentPlan: false
@@ -268,3 +270,10 @@ serviceNowPostDeploymentComments: true
 useDeltaDeployment: false
 useDeltaDeploymentWithDependencies: false
 useSmartDeploymentTests: false
+devOrgsStaleDays: 30
+enableDevOrgsRegistry: true
+enableMajorBranchDeploymentCheck: false
+majorBranchDeploymentCheckValidityHours: 24
+allowedPromotionSteps:
+  - source: uat
+    target: preprod
