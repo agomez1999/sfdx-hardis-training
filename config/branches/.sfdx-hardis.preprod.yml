@@ -1,3 +1,4 @@
-mergeTargets: []
-targetUsername: test-ofz5qyltwwqq@example.com
+mergeTargets:
+  - main
+targetUsername: alexalbons.d6b3d27fd3e8@agentforce.com
 instanceUrl: https://login.salesforce.com
