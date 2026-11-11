@@ -256,7 +256,7 @@ devHubAlias: ""
 devHubInstanceUrl: https://login.salesforce.com
 devHubUsername: ""
 enableDeltaDeploymentBetweenMajorBranches: false
-enablePromotionBranches: false
+enablePromotionBranches: true
 detectManualCherryPicks: false
 enableDeploymentApexTestClasses: false
 enableDeprecatedDeploymentPlan: false
@@ -274,3 +274,6 @@ devOrgsStaleDays: 30
 enableDevOrgsRegistry: true
 enableMajorBranchDeploymentCheck: false
 majorBranchDeploymentCheckValidityHours: 24
+allowedPromotionSteps:
+  - source: uat
+    target: preprod
