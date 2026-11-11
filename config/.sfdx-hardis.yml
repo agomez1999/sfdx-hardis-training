@@ -1,7 +1,7 @@
 projectName: HeliosEnergy
 developmentBranch: integration
 productionBranch: main
-orgAuthenticationMode: secretsOnly
+orgAuthenticationMode: encryptedCert
 availableTargetBranches:
   - integration
   - preprod
@@ -270,3 +270,7 @@ serviceNowPostDeploymentComments: true
 useDeltaDeployment: false
 useDeltaDeploymentWithDependencies: false
 useSmartDeploymentTests: false
+devOrgsStaleDays: 30
+enableDevOrgsRegistry: true
+enableMajorBranchDeploymentCheck: false
+majorBranchDeploymentCheckValidityHours: 24
