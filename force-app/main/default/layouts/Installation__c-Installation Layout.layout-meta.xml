@@ -27,6 +27,10 @@
                 <field>Crew_Size__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Crew_Workload__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Edit</behavior>
                 <field>External_Id__c</field>
             </layoutItems>
