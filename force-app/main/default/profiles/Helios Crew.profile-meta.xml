@@ -208,12 +208,6 @@
         <layout>SchedulingConstraint-Scheduling Constraint Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>SchedulingObjective-Scheduling Objective Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>SchedulingRule-Scheduling Rule Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
         <layout>SchedulingWorkspace-Scheduling Workspace Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
