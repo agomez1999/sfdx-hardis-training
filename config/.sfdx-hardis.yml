@@ -277,3 +277,4 @@ majorBranchDeploymentCheckValidityHours: 24
 allowedPromotionSteps:
   - source: uat
     target: preprod
+monitoringRepository: https://github.com/agomez1999/sfdx-hardis-training-monitoring
