@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "vsCodeSfdxHardis.autorunCommands": [
         "node scripts/training.mjs"
     ],
@@ -11,6 +12,17 @@
         "statusBarItem.remoteForeground": "#ffffff",
         "activityBar.activeBorder": "#0d9dda",
         "activityBarBadge.background": "#0d9dda",
+=======
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#0b5cab",
+        "statusBar.foreground": "#ffffff",
+        "statusBar.border": "#1b96ff",
+        "statusBarItem.hoverBackground": "#3779ba",
+        "statusBarItem.remoteBackground": "#0f487f",
+        "statusBarItem.remoteForeground": "#ffffff",
+        "activityBar.activeBorder": "#1b96ff",
+        "activityBarBadge.background": "#1b96ff",
+>>>>>>> fix/US-045-installation-date-hotfix
         "activityBarBadge.foreground": "#181818"
     }
 }
